@@ -9,9 +9,15 @@
 # ensure that the parameter you pass in is a number by converting it with to_i
 # Output the result in a full sentence using string interpolation.
 
-celsius_temperature=gets.to_i
 def convert_to_celsius(fahrenheit_temperature)
-    celsius_temperature = (fahrenheit_temperature - 32) * (5/9)
+    return (fahrenheit_temperature - 32) * (5/9)
 end
+    
+puts "Please enter a temperature in degrees Fahrenheit"
 
-puts "#{fahrenheit_temperature} degrees Fahrenheit is equivalent to #{celsius_temperature} degrees Celsius."
+fahrenheit_temperature=gets.to_i
+
+celsius_temperature = convert_to_celsius(fahrenheit_temperature)
+
+# puts "#{fahrenheit_temperature} degrees Fahrenheit is #{convert_to_celsius(fahrenheit_temperature)} degrees Celsius." 
+# "#{fahrenheit_temperature} degrees Fahrenheit is equivalent to #{celsius_temperature} degrees Celsius."
