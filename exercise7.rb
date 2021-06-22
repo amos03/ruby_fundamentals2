@@ -19,5 +19,3 @@ inside = wrap_text("new message", "###")
 middle = wrap_text("#{inside}", "===")
 
 puts outside = wrap_text("#{middle}", "---")
-
-# puts outside
