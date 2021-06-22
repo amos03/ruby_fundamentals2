@@ -37,13 +37,27 @@
 # end
 
 def speed_calculator(distance_meters, time_minutes)
-    return speed = distance_meters / time_minutes*60
+    return distance_meters / time_minutes/60
 end
 
 puts "Please enter how far Person 1 ran (in meters):"
 person1_distance = gets.to_f
 puts "Please enter how much time (in minutes) it took Person 1 to run #{person1_distance} meters"
 person1_time = gets.to_f
+
+puts "Please enter how far Person 2 ran (in meters):"
+person2_distance = gets.to_f
+puts "Please enter how much time (in minutes) it took Person 2 to run #{person2_distance} meters"
+person2_time = gets.to_f
+
+puts "Please enter how far Person 3 ran (in meters):"
+person3_distance = gets.to_f
+puts "Please enter how much time (in minutes) it took Person 3 to run #{person3_distance} meters"
+person3_time = gets.to_f
+
+p person1_speed = speed_calculator(person1_distance, person1_time)
+p person2_speed = speed_calculator(person2_distance, person2_time)
+p person3_speed = speed_calculator(person3_distance, person3_time)
 
 
 # def input_data(person_name, #{person_name}distance, #{person_name}time)
