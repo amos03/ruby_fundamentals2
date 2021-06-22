@@ -20,6 +20,6 @@ fahrenheit_temperature=gets.to_i
 
 celsius_temperature = convert_tocelsius(fahrenheit_temperature)
 
-p celsius_temperature
+# p celsius_temperature
 
 puts "#{fahrenheit_temperature} degrees Fahrenheit is equivalent to #{celsius_temperature} degrees Celsius."
