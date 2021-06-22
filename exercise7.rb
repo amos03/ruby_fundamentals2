@@ -15,7 +15,9 @@ end
 # wrap_text("hello","===")
 
 inside = wrap_text("new message", "###")
-middle = wrap_text (inside, "===")
-outside = wrap_text (middle, "---")
 
-puts outside
+middle = wrap_text("#{inside}", "===")
+
+puts outside = wrap_text("#{middle}", "---")
+
+# puts outside
