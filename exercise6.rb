@@ -14,7 +14,7 @@ def convert_tocelsius(fahrenheit)
     return fahrenheit*5/9 - 32*5/9 
 end
     
-p "Please enter a temperature in degrees Fahrenheit"
+puts "Please enter a temperature in degrees Fahrenheit:"
 
 fahrenheit_temperature=gets.to_i
 
