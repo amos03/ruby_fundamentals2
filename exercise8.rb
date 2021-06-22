@@ -69,17 +69,18 @@ person1_speed = speed_calculator(person1_distance, person1_time)
 person2_speed = speed_calculator(person2_distance, person2_time)
 person3_speed = speed_calculator(person3_distance, person3_time)
 
-if person3_speed > person2_speed && person3_speed > person1_speed
-  puts "Person 3 was the fastest at #{person3_speed} m/s"
-elsif person2_speed > person3_speed && person2_speed > person1_speed
-  puts "Person 2 was the fastest at #{person2_speed} m/s"
-elsif person1_speed > person3_speed && person1_speed > person2_speed
-  puts "Person 1 was the fastest at #{person1_speed} m/s"
-elsif person1_speed == person2_speed && person2_speed == person3_speed
-  puts "Everyone tied at #{person1_speed} m/s"
-else
-  puts "Well done everyone!"
-end
+winning_speed=[person1_speed, person2_speed, person3_speed].max
+hash = {"Person 1": person1_speed, "Person 2": person2_speed, "Person 3": person3_speed }
+winner = hash.key(hash.values.max) 
 
-#idea for using an array to determine max speed: but how do I link it back to the person?
-p [person1_speed, person2_speed, person3_speed].max
+if person1_speed==person2_speed && person2_speed==person3_speed
+    puts "Everyone tied at #{winning_speed} m/s."
+elsif person1_speed==person2_speed && person2_speed > person3_speed
+    puts "Person 1 and Person 2 tied with a speed of #{winning_speed} m/s."
+elsif person1_speed==person3_speed && person3_speed>person2_speed
+    puts "Person 1 and Person 3 tied with a speed of #{winning_speed} m/s."
+elsif person2_speed==person3_speed and person3_speed>person1_speed
+    puts "Person 2 and Person 3 tied with a speed of #{winning_speed} m/s."
+else
+puts "#{winner} was the fastest at #{winning_speed} m/s."
+end
