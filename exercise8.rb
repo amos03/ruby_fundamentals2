@@ -81,3 +81,5 @@ else
   puts "Well done everyone!"
 end
 
+#idea for using an array to determine max speed: but how do I link it back to the person?
+p [person1_speed, person2_speed, person3_speed].max
