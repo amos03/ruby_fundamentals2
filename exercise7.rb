@@ -12,4 +12,10 @@ def wrap_text(text,wrapper)
     wrapped_text = "#{wrapper}#{text}#{wrapper}"
 end
 
-p wrap_text("hello","===")
+# wrap_text("hello","===")
+
+inside = wrap_text("new message", "###")
+middle = wrap_text (inside, "===")
+outside = wrap_text (middle, "---")
+
+puts outside
